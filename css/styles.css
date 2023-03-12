@@ -203,10 +203,10 @@ header {
 }
 
 .form-field {
-     padding-bottom: 8px; 
+     margin-bottom: 8px; 
     display: flex;
     flex-direction: column;
-    
+    position: relative; 
 }
 
 
@@ -214,27 +214,66 @@ header {
     text-align: start;
     
     color: #8E8F99;
-    /* line-height: 1.16px; */
     font-size: 14px ; 
-    padding-bottom: 4px;
+  
+    
+
+    
 }
 
-
 .form-input {
-    padding: 0;
+    font-family: Roboto, sans-serif;
+    font-size: 14px ;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     width: 360px ;
     height: 40px ; 
+    padding-left: 38px;
+    margin-top: 4px;
     
 }
 
+.form-input:focus-visible {
+outline: none;
+border: 1px solid #4D5AE5;
+transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-icon {
+    position: absolute;
+     top:60%; 
+    left: 0;
+    width: 34px;
+    height: 25px; 
+    padding-left: 19px;
+  
+  
+    
+}
+
+.form-field:focus-within >.form-icon { 
+    fill: #4D5AE5;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-comment:focus {
+outline: none;
+border: 1px solid #4D5AE5;
+transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
 .user-comment {
+    font-family: Roboto, sans-serif;
+    font-size: 14px ; 
     width:360px ;
     height:120px ; 
     resize: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    padding: 8px 16px;
+    margin-top: 4px;
+   
 }
 
 .privacy-policy label {
@@ -248,6 +287,75 @@ header {
 .link-privacy-policy {
     color: var(--nav-color-secondery) ;
 }
+
+.form-checkbox-icon{
+display: flex;
+align-items: center;
+justify-content: center;
+
+width: 16px;
+height: 16px;
+
+margin-right: 8px;
+
+color: #f4f4fd;
+border: 1.25px solid #2e2f42;
+border-radius: 2px;
+cursor: pointer;
+
+}
+
+ .checkbox-icon {
+    width: 16px;
+    height: 16px;
+ display: flex;
+ fill: currentColor;
+ 
+} 
+
+.checkbox {
+    position: absolute;
+  top: 100%;
+  left: 8px;
+
+  appearance: none;
+  width: 1px;
+  height: 1px;
+
+}
+
+.checkbox:checked +.form-checkbox-icon {
+    background-color: var(--nav-color);
+    border-color: var(--nav-color) ;
+
+    
+}
+
+.checkbox:checked+.form-checkbox-icon .checkbox-icon {
+    fill: #404BBF;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  }
+
+.form-privacy-policy {
+  
+    font-size: 12px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  
+    margin-bottom: 24px;
+  
+    color: #757575;
+
+    
+
+
+}
+
+
 
 
 
@@ -703,6 +811,69 @@ h3.foto-team {
 
 /* footer */
 
+.form-field-footer {
+display: flex;
+flex-direction: column; 
+}
+
+.user-comment-footer {
+outline: none; 
+ border-radius: 4px;
+border: 1px solid #FFFFFF;
+transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+background-color: #2E2F42;
+color: #FFFFFF;
+width: 264px;
+height: 40px;
+padding: 8px 16px;
+resize: none;
+margin-right: 24px;
+}
+
+.form-footer {
+    display: flex;
+}
+
+.user-comment-footer::placeholder {
+    color: #FFFFFF;
+}
+
+.form-label-footer {
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.form-field-footer {
+    margin-left: 80px;
+}
+
+.button-footer {
+   
+    position: relative;
+    color: var(--main-color); 
+    background-color: var(--nav-color-secondery);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+    border-color:  var(--nav-color-secondery);
+    cursor: pointer;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 24px;
+    padding-right: 64px;
+
+}
+
+.foorm-footer-icon {
+    position: absolute;  
+    width:24px ;
+    height:20px ;
+    padding-left: 10px;
+    display: inline-block;
+    
+  
+}
+
 .container-width {
     max-width: 264px;
     
@@ -744,7 +915,9 @@ h3.foto-team {
     color: var(--main-color);
     margin-bottom: 16px;
     font-weight: 500;
-    line-height: 1.5
+    line-height: 1.5;
+    font-size: 16px;
+    
 }
 .footer-icon {
     width: 24px;
