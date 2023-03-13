@@ -812,14 +812,16 @@ h3.foto-team {
 
 .form-field-footer {
 
-    display: flex;
+    /* display: flex;
     flex-direction: column; 
-    margin-left: 80px;
+    margin-left: 80px; */
 
 }
 
 .contact-form-footer {
-
+    display: flex;
+    flex-direction: column; 
+    margin-left: 80px;
 }
 
 
