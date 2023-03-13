@@ -174,6 +174,8 @@ header {
 
 
 .modal{
+    padding: 24px ;
+    padding-top: 72px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -185,20 +187,17 @@ header {
     background-color: #FFFFFF;
 
     overflow: auto;
+
     
 }
 
 .title-form {
     font-weight: 500;
     font-size: 16px ;
-    padding-bottom: 16px;
+    margin-bottom: 16px;
 }
 
 .contact-form {
-    padding-top: 72px;
-    padding-bottom: 24px;
-    margin-left: 24px ;
-    margin-right: 24px ;
     color: var(--color);
 }
 
@@ -812,14 +811,23 @@ h3.foto-team {
 /* footer */
 
 .form-field-footer {
-display: flex;
-flex-direction: column; 
+
+    display: flex;
+    flex-direction: column; 
+    margin-left: 80px;
+
 }
+
+.contact-form-footer {
+
+}
+
 
 .user-comment-footer {
 outline: none; 
  border-radius: 4px;
 border: 1px solid #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 background-color: #2E2F42;
 color: #FFFFFF;
@@ -843,9 +851,7 @@ margin-right: 24px;
     margin-bottom: 16px;
 }
 
-.form-field-footer {
-    margin-left: 80px;
-}
+
 
 .button-footer {
    
